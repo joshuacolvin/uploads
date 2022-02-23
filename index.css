@@ -1,0 +1,213 @@
+:root {
+  --color-error: #bc0011;
+  --color-error-20: #bc001133;
+  --color-light: #ced6e8;
+  --color-light-75: #dae0ee;
+  --color-medium: #646c8d;
+  --color-medium-50: #b2b6c6;
+  --color-muted-50: #f9fbff;
+  --color-primary: #004987;
+  --color-secondary: #008bd2;
+  --color-success-20: #32b18d33;
+  --color-white: #ffffff;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+p {
+  color: var(--color-medium-50);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  margin: 0.625rem 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: fit-content;
+  min-width: 611px;
+}
+
+.upload {
+  padding: 3rem;
+  border: 2px dashed var(--color-light);
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload .logo {
+  width: 236px;
+  margin-bottom: 1.5rem;
+}
+
+.upload span {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-medium);
+}
+
+.upload label {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.upload .upload__button {
+  display: none;
+}
+
+.upload input[type="file"] {
+  display: none;
+}
+
+.upload p {
+  margin: 1rem 0;
+}
+
+/**
+   * Message
+   */
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-muted-50);
+  border: 1px solid var(--color-light-75);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+.message__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message h2 {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-medium);
+  margin-top: 0;
+}
+
+.message p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 0.875rem;
+  color: var(--color-medium-50);
+  display: flex;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.message .filename {
+  font-weight: var(--font-weight-normal);
+}
+
+.message .icon {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.message .icon.success {
+  background-color: var(--color-success-20);
+}
+
+.message .icon.warn {
+  background-color: var(--color-error-20);
+}
+
+/**
+   * Progress Bar
+   */
+progress[value] {
+  width: 100%;
+  height: 3px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--color-light);
+  border-radius: 3px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--color-light);
+  border-radius: 3px;
+}
+
+progress[value]::-moz-progress-bar {
+  border-radius: 3px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: var(--color-secondary);
+  border-radius: 3px;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: var(--color-secondary);
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: calc(100vw - 8rem);
+    min-width: unset;
+  }
+
+  .upload span {
+    display: none;
+  }
+
+  .upload .upload__button {
+    display: block;
+    background-color: var(--color-primary);
+    padding: 0.75rem 1.5rem;
+    color: var(--color-white);
+    font-weight: var(--font-weight-medium);
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  main {
+    width: calc(100vw - 3rem);
+  }
+}

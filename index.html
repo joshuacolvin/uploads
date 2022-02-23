@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <meta http-equiv="PRAGMA" content="NO-CACHE" />
+    <meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+    <main>
+      <div class="upload">
+        <img
+          alt="Ascent Logo"
+          class="logo"
+          src="https://cdn.ascentgl.com/img/ascent-logo.png"
+        />
+        <form>
+          <span>Drop your file here, or <label for="file">browse</label></span>
+          <label class="upload__button">
+            <input id="file" type="file" />
+            Upload
+          </label>
+          <p>Max file size: 10MB</p>
+        </form>
+      </div>
+      <div class="message">
+        <div class="message__container">
+          <div class="message__content">
+            <h2>Uploading...</h2>
+            <p>
+              <span class="percentage">85%</span>
+              <span class="filename">document.pdf</span>
+            </p>
+          </div>
+          <div class="icon warn">
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.51865 4.00004L7.89139 0.626747C7.9602 0.557939 7.99886 0.464612 7.99886 0.367303C7.99886 0.269993 7.9602 0.17667 7.89139 0.107862C7.82258 0.0390539 7.72925 0.000400919 7.63195 0.000400916C7.53464 0.000400913 7.44132 0.0390539 7.37251 0.107862L3.99977 3.48115L0.626195 0.107587C0.557387 0.0387793 0.464068 0.00012207 0.366759 0.00012207C0.269449 0.00012207 0.176122 0.0387793 0.107314 0.107587C0.0385061 0.176396 -0.000151179 0.269718 -0.000151179 0.367028C-0.000151179 0.464337 0.0385061 0.55766 0.107314 0.626468L3.48089 4.00004L0.107314 7.37361C0.0732257 7.40768 0.0461805 7.44813 0.0277249 7.49265C0.0092694 7.53717 -0.000231272 7.58489 -0.000244128 7.63309C-0.000256983 7.68128 0.0092171 7.72901 0.0276489 7.77354C0.0460807 7.81807 0.0731087 7.85854 0.107179 7.89263C0.141249 7.92672 0.181699 7.95376 0.226221 7.97222C0.270743 7.99067 0.318462 8.00018 0.366657 8.00019C0.414853 8.00021 0.462579 7.99072 0.507111 7.97229C0.551643 7.95386 0.592107 7.92684 0.626195 7.89277L3.99977 4.5192L7.37334 7.89277C7.40743 7.92684 7.44789 7.95386 7.49242 7.97229C7.53695 7.99072 7.58468 8.00021 7.63287 8.00019C7.68107 8.00018 7.7288 7.99067 7.77332 7.97222C7.81784 7.95376 7.85829 7.92672 7.89236 7.89263C7.92643 7.85854 7.95345 7.81807 7.97188 7.77354C7.99031 7.72901 7.9998 7.68128 7.99978 7.63309C7.99977 7.58489 7.99026 7.53717 7.97181 7.49265C7.95335 7.44813 7.92631 7.40768 7.89222 7.37361L4.51865 4.00004Z"
+                fill="#BC0011"
+              />
+            </svg>
+          </div>
+        </div>
+        <progress value="85" max="100"></progress>
+      </div>
+      <div class="message">
+        <div class="message__container">
+          <div class="message__content">
+            <h2>Completed</h2>
+            <p>Thank you, someone should be in touch with your shortly.</p>
+          </div>
+          <div class="icon success">
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 15 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.65698 11.5179C5.55334 11.5179 5.4528 11.4825 5.37201 11.4176L0.805186 7.76525C0.710604 7.68958 0.649961 7.57944 0.636585 7.45906C0.623209 7.33867 0.658185 7.21791 0.733851 7.12333C0.809517 7.02875 0.919671 6.9681 1.04005 6.95472C1.16044 6.94134 1.2812 6.97634 1.37578 7.052L5.58979 10.4236L13.524 0.725823C13.6007 0.632063 13.7116 0.572622 13.8321 0.560571C13.9527 0.54852 14.0731 0.584848 14.1668 0.661565C14.2606 0.738281 14.32 0.8491 14.3321 0.969645C14.3441 1.09019 14.3078 1.21059 14.2311 1.30434L6.00911 11.3504C5.96645 11.4026 5.91276 11.4448 5.85187 11.4737C5.79097 11.5027 5.72441 11.5178 5.65698 11.5179Z"
+                fill="#32B18D"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
